@@ -27,15 +27,15 @@ Author URI: http://bajada.net
 */
 
 
-function ucc_nhf_init() {
-  add_action( 'admin_print_styles-post.php', 'ucc_nhf_admin_print_styles' );
-  add_action( 'admin_print_styles-post-new.php', 'ucc_nhf_admin_print_styles' );
-}
-add_action('init', 'ucc_nhf_init');
-
-
 function ucc_nhf_admin_print_styles() {
-  wp_enqueue_style( 'nicer-html-font', plugins_url('nicer-html-font.css', __FILE__), '', '1.0' );
+        wp_enqueue_style( 'nicer-html-font', plugins_url( 'nicer-html-font.css', __FILE__ ), '', '1.0' );
 }
+
+
+function ucc_nhf_init() {
+	add_action( 'admin_print_styles-post.php', 'ucc_nhf_admin_print_styles' );
+	add_action( 'admin_print_styles-post-new.php', 'ucc_nhf_admin_print_styles' );
+}
+add_action( 'init', 'ucc_nhf_init' );
 
 ?>
